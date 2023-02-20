@@ -4,6 +4,7 @@ import android.content.Context
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.flashlight.databinding.ActivityMainBinding
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             if (cameraWithFlashlight != null) {
                 onFlashlightClicked(cameraManager, cameraWithFlashlight)
             } else {
-
+                Toast.makeText(this, "The flashlight was not found", Toast.LENGTH_LONG).show()
             }
         }
     }
